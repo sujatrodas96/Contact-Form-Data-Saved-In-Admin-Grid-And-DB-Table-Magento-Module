@@ -1,0 +1,52 @@
+<form id="custom-form" action="<?= $block->getFormAction() ?>" method="post" data-mage-init='{"validation": {}}'>
+    <div class="field">
+        <label for="name" class="label"><span><?= $block->escapeHtml(__('Name')) ?></span></label>
+        <div class="control">
+            <input type="text" id="name" name="name" class="input-text required-entry" data-validate="{required:true}" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="email" class="label"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+        <div class="control">
+            <input type="email" id="email" name="email" class="input-text required-entry validate-email" data-validate="{required:true, 'validate-email':true}" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="phone" class="label"><span><?= $block->escapeHtml(__('Phone Number')) ?></span></label>
+        <div class="control">
+            <input type="tel" id="phone" name="phone" class="input-text required-entry validate-length validate-digits" pattern="\d{10}" data-validate="{required:true}" />
+        </div>
+    </div>
+
+    <div class="field">
+    <label for="domain" class="label"><span><?= $block->escapeHtml(__('Domain Name')) ?></span></label>
+    <div class="control">
+        <input type="text" id="domain" name="domain" class="input-text required-entry validate-clean-url" data-validate="{required:true, 'validate-custom-domain':true}" />
+    </div>
+</div>
+
+
+    <div class="field">
+        <label for="country" class="label"><span><?= $block->escapeHtml(__('Country')) ?></span></label>
+        <div class="control">
+            <input type="text" id="country" name="country" class="input-text required-entry" data-validate="{required:true}" />
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="state" class="label"><span><?= $block->escapeHtml(__('State')) ?></span></label>
+        <div class="control">
+            <input type="text" id="state" name="state" class="input-text required-entry" data-validate="{required:true}" />
+        </div>
+    </div>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action primary">
+                <span><?= $block->escapeHtml(__('Submit')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>

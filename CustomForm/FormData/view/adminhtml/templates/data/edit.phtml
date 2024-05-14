@@ -1,0 +1,71 @@
+<?php
+/** @var \CustomForm\FormData\Block\Adminhtml\Data\Edit\Form $block */
+$model = $block->getCurrentData();
+?>
+
+<div>
+    <h2><?= $block->escapeHtml(__('Edit Record')) ?></h2>
+    <form id="edit_form" action="<?= $block->getUrl('*/*/save', ['entity_id' => $model->getId()]) ?>" method="post" enctype="multipart/form-data" data-mage-init='{"validation":{}}'>
+        <?= $block->getBlockHtml('formkey') ?>
+        <?= $block->getChildHtml() ?>
+
+        <?php if ($model && $model->getId()): ?>
+            <input type="hidden" name="entity_id" value="<?= $model->getId() ?>"/>
+        <?php endif; ?>
+
+        <div class="fieldset">
+            <legend class="legend"><span><?= $block->escapeHtml(__('Edit Information')) ?></span></legend>
+
+            <div class="field name required">
+                <label class="label" for="name"><span><?= $block->escapeHtml(__('Name')) ?></span></label>
+                <div class="control">
+                    <input type="text" name="name" id="name" value="<?= $block->escapeHtmlAttr($model->getName()) ?>" title="<?= $block->escapeHtmlAttr(__('Name')) ?>" class="input-text" data-validate="{required:true}" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="field email required">
+                <label class="label" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+                <div class="control">
+                    <input type="text" name="email" id="email" value="<?= $block->escapeHtmlAttr($model->getEmail()) ?>" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" class="input-text" data-validate="{required:true, 'validate-email':true}" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="field phone">
+                <label class="label" for="phone"><span><?= $block->escapeHtml(__('Phone')) ?></span></label>
+                <div class="control">
+                    <input type="text" name="phone" id="phone" value="<?= $block->escapeHtmlAttr($model->getPhone()) ?>" title="<?= $block->escapeHtmlAttr(__('Phone')) ?>" class="input-text" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="field domain">
+                <label class="label" for="domain"><span><?= $block->escapeHtml(__('Domain')) ?></span></label>
+                <div class="control">
+                    <input type="text" name="domain" id="domain" value="<?= $block->escapeHtmlAttr($model->getDomain()) ?>" title="<?= $block->escapeHtmlAttr(__('Domain')) ?>" class="input-text" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="field country">
+                <label class="label" for="country"><span><?= $block->escapeHtml(__('Country')) ?></span></label>
+                <div class="control">
+                    <input type="text" name="country" id="country" value="<?= $block->escapeHtmlAttr($model->getCountry()) ?>" title="<?= $block->escapeHtmlAttr(__('Country')) ?>" class="input-text" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="field state">
+                <label class="label" for="state"><span><?= $block->escapeHtml(__('State')) ?></span></label>
+                <div class="control">
+                    <input type="text" name="state" id="state" value="<?= $block->escapeHtmlAttr($model->getState()) ?>" title="<?= $block->escapeHtmlAttr(__('State')) ?>" class="input-text" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Add other fields similarly -->
+
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="action-default scalable primary">
+                <span><?= $block->escapeHtml(__('Save')) ?></span>
+            </button>
+        </div>
+    </form>
+</div>

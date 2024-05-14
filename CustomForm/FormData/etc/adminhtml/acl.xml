@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="CustomForm_FormData::formdata" title="Custom Form Data" sortOrder="100">
+                    <resource id="CustomForm_FormData::data" title="Manage Data" sortOrder="10">
+                        <resource id="CustomForm_FormData::edit" title="Edit" sortOrder="10"/>
+                        <resource id="CustomForm_FormData::delete" title="Delete" sortOrder="20"/>
+                        <resource id="CustomForm_FormData::massdelete" title="Mass Delete" sortOrder="30"/>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

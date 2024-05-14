@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="CustomForm_FormData::formdata" title="Form Data" module="CustomForm_FormData" sortOrder="10" resource="CustomForm_FormData::formdata"/>
+        <add id="CustomForm_FormData::formdata_data" title="Manage Data" module="CustomForm_FormData" sortOrder="10" action="customform_formdata/data/index" parent="CustomForm_FormData::formdata" resource="CustomForm_FormData::formdata"/>
+    </menu>
+</config>
