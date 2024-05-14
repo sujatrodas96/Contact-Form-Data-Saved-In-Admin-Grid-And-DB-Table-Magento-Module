@@ -1,0 +1,6 @@
+1.Install this Module
+2.you will get a form in your-domain/customform/index/index
+3.Form value will store in customform_formdata table (it will crteate after running upgrade command)
+4.A menu will create in Admin Formdata 
+5.Data will show in Admin Menu with Grid Structure
+6.You can Edit Delete the Data also
